@@ -2,5 +2,6 @@
 [+] LDAP Enumeration
 ==============================================================================
 
+ldapsearch -x -h 172.16.1.20
 ldapsearch -x -h 10.10.10.103 -s base namingcontexts
 ldapsearch -x -h 10.10.10.103 -s sub -b 'DC=HTB,DC=LOCAL'
